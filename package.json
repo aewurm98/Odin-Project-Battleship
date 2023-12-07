@@ -1,0 +1,43 @@
+{
+  "name": "odin-project-battleship",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --watch",
+    "start": "webpack serve --open",
+    "start-chrome": "webpack serve --open-app-name 'google chrome'",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aewurm98/Odin-Project-Battleship.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "jest": {
+    "testMatch": [
+      "**/__tests__/**/*.[jt]s?(x)",
+      "**/?(*.)+(spec|test).[jt]s?(x)"
+    ]
+  },
+  "bugs": {
+    "url": "https://github.com/aewurm98/Odin-Project-Battleship/issues"
+  },
+  "homepage": "https://github.com/aewurm98/Odin-Project-Battleship#readme",
+  "devDependencies": {
+    "@babel/core": "^7.23.5",
+    "@babel/preset-env": "^7.23.5",
+    "css-loader": "^6.8.1",
+    "html-webpack-plugin": "^5.5.4",
+    "jest": "^29.7.0",
+    "style-loader": "^3.3.3",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}
