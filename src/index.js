@@ -19,7 +19,9 @@ class Ship {
   }
 
   hit(position) {
-    this.hits.push(position);
+    if (this.hits.length < this.length && !this.hits.includes(position)) {
+      this.hits.push(position);
+    }
   }
 
   isSunk() {
