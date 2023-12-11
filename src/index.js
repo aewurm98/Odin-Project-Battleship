@@ -1,5 +1,36 @@
 import './styles.css';
 
+// Components
+
+/* Create a Ship class that will be used to create ship objects. Each ship object will have the following properties:
+  - name: the name of the ship
+  - length: the length of the ship
+  - hits: an array that will be used to track the hits on the ship
+  - sunk: a boolean that will be used to track whether the ship has been sunk
+  - hit(): a method that will be used to record a hit on the ship
+  - isSunk(): a method that will be used to determine whether the ship has been sunk */
+
+class Ship {
+  constructor(name, length) {
+    this.name = name;
+    this.length = length;
+    this.hits = [];
+    this.sunk = false;
+  }
+
+  hit(position) {
+    this.hits.push(position);
+  }
+
+  isSunk() {
+    if (this.hits.length == this.length) {
+      this.sunk = true;
+    }
+  }
+}
+
+// Game Logic
+
 // DOM Manipulation
 
 // Page Load Tasks
@@ -206,3 +237,6 @@ container.appendChild(footer);
 const message = document.createElement('div');
 message.classList.add('message');
 footer.appendChild(message);
+
+// Export this module for testing
+export { Ship };
